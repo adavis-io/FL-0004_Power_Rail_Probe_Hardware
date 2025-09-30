@@ -1,0 +1,2 @@
+DP=_N,_P
+SPI=SCLK,MISO,MOSI,\CS
