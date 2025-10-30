@@ -170,7 +170,6 @@ of 2.5kHz, chosen to attenuate noise for better DC accuracy, while the driver
 for the 12-bit ADC (U4B) has a 50kHz cutoff frequency for faster transient 
 response.
 
-
 #### Microcontroller
 
 ![Microcontroller schematic](./assets/microcontroller.png)
@@ -184,7 +183,6 @@ Tag-Connect plug-of-nails cable.
 
 I opted to add a supply watchdog to ensure clean startup, though the STM32's 
 internal POR is likely sufficient. 
-
 
 #### Power
 
@@ -224,10 +222,17 @@ powering the board. Either add a level shifter, a resistor to more easily
 disconnect pin 1 of the UART header, or eliminate the 3.3V pin from the header 
 altogether. 
 
-
 ## Results
 
 Initial testing appears promising. I haven't had time yet to fully characterize 
 the design's performance, but some testing with an AWG does show the probe 
 passing signals through as expected. Thus far, each of the blocks does appear 
 to be functional, and without clear stability issues or unusual behavior.
+
+## A Note on Nomenclature
+This design uses an SPI bus for communication between the microcontroller and 
+digital potentiometer. To avoid ambiguity or renaming STMicroelectronics' 
+interface signals, I've stuck with the MOSI/MISO convention. My intended 
+readings for these are "Main In, Sub Out" and "Main Out, Sub In," at least 
+until STMicroelectronics issues a new datasheet and I update my library symbols 
+to match. 
