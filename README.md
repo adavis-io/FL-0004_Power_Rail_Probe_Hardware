@@ -28,8 +28,8 @@ signal get masked, particularly DC offsets caused by power supply loading.
 
 While there are commercially available solutions for this, 
 all had a few drawbacks that made them unattractive for my purposes: 
-1. My daily-driver scope is a Siglent. At the time, Siglent didn't offer a 
-power railprobe compatible with their oscilloscopes' interface. 
+1. My daily-driver scope is a Siglent SDS3104X. At the time, Siglent didn't 
+offer a power rail probe compatible with their oscilloscopes' interface. 
 (They [do now](https://siglentna.com/product/power-rail-probe-sap4000p/))
 2. Compatibility aside, they're expensive. Like, on the order of how much I 
 spent just on my oscilloscope levels of expensive. 
